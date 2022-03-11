@@ -27,6 +27,9 @@ services:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASS}
 
+  #api:
+
+  # nginx 
   proxy:
     build:
       context: ./proxy
