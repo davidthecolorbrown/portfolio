@@ -1,8 +1,0 @@
-asgiref==3.5.0
-#Django==4.0.3
-django==3.2.12  # pyup: < 4.0  # https://www.djangoproject.com/
-sqlparse==0.4.2
-#psycopg2==2.9.1 # postgres
-psycopg2==2.9.3 # postgres
-django-environ==0.8.1  # https://github.com/joke2k/django-environ
-#uWSGI>=2.0.18,<2.1

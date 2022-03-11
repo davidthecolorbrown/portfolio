@@ -5,7 +5,7 @@
 gunicorn==20.1.0  # https://github.com/benoitc/gunicorn
 psycopg2==2.9.3  # https://github.com/psycopg/psycopg2
 Collectfast==2.2.0  # https://github.com/antonagestam/collectfast
-
+#uWSGI>=2.0.18,<2.1
 # Django
 # ------------------------------------------------------------------------------
 django-storages[boto3]==1.12.3  # https://github.com/jschneier/django-storages

@@ -1,6 +1,19 @@
-asgiref==3.5.0
+#asgiref==3.5.0
 #Django==4.0.3
-django==3.2.12  # pyup: < 4.0  # https://www.djangoproject.com/
-sqlparse==0.4.2
+#django==3.2.12  # pyup: < 4.0  # https://www.djangoproject.com/
+#sqlparse==0.4.2
 #psycopg2==2.9.1 # postgres
-django-environ==0.8.1  # https://github.com/joke2k/django-environ
+#django-environ==0.8.1  # https://github.com/joke2k/django-environ
+
+# when doing postgres and deploying
+#Django>=3.2.3,<3.3
+#psycopg2>=2.8.6,<2.9
+#psycopg2==2.9.1 # postgres
+#uWSGI>=2.0.19.1,<2.1
+
+# current
+asgiref==3.5.0
+Django==3.2.12
+pytz==2021.3
+sqlparse==0.4.2
+uWSGI==2.0.20
