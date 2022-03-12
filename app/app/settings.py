@@ -38,7 +38,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY') # uncomment out when using '.envs'
-
 #from . import constants # local file for storing API keys, etc 
 #SECRET_KEY = constants.SECRET_KEY
 #from django.core.management.utils import get_random_secret_key
