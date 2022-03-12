@@ -37,11 +37,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = os.environ.get('SECRET_KEY') # uncomment out when using '.envs'
-from . import constants # local file for storing API keys, etc 
-SECRET_KEY = constants.SECRET_KEY
+SECRET_KEY = os.environ.get('SECRET_KEY') # uncomment out when using '.envs'
 
-
+#from . import constants # local file for storing API keys, etc 
+#SECRET_KEY = constants.SECRET_KEY
 #from django.core.management.utils import get_random_secret_key
 #SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 
@@ -81,8 +80,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'portfolio.urls'
-#ROOT_URLCONF = 'app.urls'
+#ROOT_URLCONF = 'portfolio.urls'
+ROOT_URLCONF = 'app.urls'
 
 TEMPLATES = [
     {
@@ -120,23 +119,24 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # default sqlite3 db
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-# POSTGRES database configuration (in settings.py + docker-compose.yml)
 #DATABASES = {
 #    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'HOST': os.environ.get('DB_HOST'),
-#        'NAME': os.environ.get('DB_NAME'),
-#        'USER': os.environ.get('DB_USER'),
-#        'PASSWORD': os.environ.get('DB_PASS'),
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
 #}
+
+# POSTGRES database configuration (in settings.py + docker-compose.yml)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': os.environ.get('DB_HOST'),
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASS'),
+        #'PORT': 5432
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -180,7 +180,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-
+# map static files (js, css, etc) and media files (uploads at runtime) to local dir 'data/web/media/' and 'data/web/static/'
 #STATIC_URL = 'static/'
 STATIC_URL = '/static/static/'
 MEDIA_URL = '/static/media/'

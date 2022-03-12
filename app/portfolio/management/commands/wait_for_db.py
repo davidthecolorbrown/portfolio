@@ -1,7 +1,6 @@
 """
 Django command to wait for the database to be available.
 """
-'''
 import time
 
 from psycopg2 import OperationalError as Psycopg2OpError
@@ -25,4 +24,3 @@ class Command(BaseCommand):
                 time.sleep(1)
 
         self.stdout.write(self.style.SUCCESS('Database available!'))
-'''

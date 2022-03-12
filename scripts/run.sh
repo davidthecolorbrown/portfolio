@@ -13,7 +13,7 @@ ls -la /vol/web
 whoami
 
 # have application wait until postgres database starts
-#python manage.py wait_for_db
+python manage.py wait_for_db
 
 # have django collect all static files across all apps and put in one place
 # these are stored in the static root path in 'settings.py'
